@@ -1,0 +1,455 @@
+/* Variables CSS */
+:root {
+    --primary-color: #4d339b;
+    --secondary-color: #3e226e;
+    --text-color: #ffffff;
+    --highlight-color: rgb(100, 255, 100);
+}
+
+.index-body {
+    background-image: url('/imagenes/fondito.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+p, a, h1, h2, h3, h4, h5 {
+    font-family: 'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 20px 20px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    height: 130px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    height: 80px;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.metodos-de-pagos {
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.metodos-de-pagos img {
+    height: 40px;
+}
+
+.lista-pagos {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lista-pagos li {
+    padding: 5px;
+}
+
+.copy {
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* ESTILOS DE INDEX */
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.index-page {
+    background-image: url('/imagenes/artisan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 456px;
+    margin-top: 80px;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 300px;
+}
+
+.hero button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero button a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* ESTILOS TIENDA */
+
+.card-container {
+    cursor: pointer;
+}
+#productostien {
+    color: var(--highlight-color);
+    margin-top: 25px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: bold;
+}
+
+h1, h4, h3 {
+    text-align: left;
+    padding: 0 200px 5px;
+    margin: 0;
+}
+
+h4, h3 {
+    color: black;
+}
+
+.card {
+    flex: 0 0 15%;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 1px 0 10px;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    max-width: 500px; /* Adjust this value to your desired maximum width */
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-footer button {
+    font-size: 14px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-footer button:hover {
+    background-color: var(--highlight-color);
+}
+
+.card-footer button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ESTILOS NOSOTROS */
+
+.nosotrosmain {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#titulosnosotros {
+    color: var(--highlight-color);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: bold;
+}
+
+#somos {
+    color: black;
+}
+
+#gracias {
+    color: black;
+    font-weight: bold;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.centered-image {
+    display: block;
+    max-width: 17%;
+    height: auto;
+    margin: auto;
+}
+
+/* ESTILOS CONTACTO */
+
+#tienespreguntas {
+    color: var(--highlight-color);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: bold;
+}
+
+.contactopreg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000000;
+}
+
+#form {
+    background-color: #ffffff;
+    padding: 5rem;
+    border-radius: 50px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0);
+    width: 70%;
+    margin: 5% auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    padding: 0px;
+    width: 100%;
+}
+
+textarea {
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+#enviar {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#enviar:hover {
+    background-color: var(--highlight-color);
+}
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20%;
+    margin-bottom: 20%;
+}
+
+/* ESTILOS FAQS */
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.question-container h3,
+.question-container p {
+    margin: 0;
+}
+
+#pf,
+#ofrecemos,
+#hechosmouse,
+#garantia,
+#envios {
+    color: var(--highlight-color);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: bold;
+}
+
+#pf {
+    text-align: center;
+}
+
+#ofrecemos,
+#garantia {
+    text-align: left;
+    margin-left: 250px;
+}
+
+#ofrecemoscsh,
+#garantia2 {
+    text-align: left;
+    margin-left: 100px;
+    color: black;
+}
+
+#hechosmouse,
+#envios {
+    text-align: right;
+    margin-right: 250px;
+}
+
+#hechosmousep,
+#envios2 {
+    text-align: right;
+    margin-right: 200px;
+    color: black;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .social-media {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .metodos-de-pagos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metodos-de-pagos img {
+        margin-bottom: 10px;
+    }
+
+    .card {
+        flex: 0 0 45%;
+    }
+
+    h1, h4, h3 {
+        padding: 0 100px 5px;
+    }
+
+    #ofrecemos,
+    #garantia {
+        margin-left: 100px;
+    }
+
+    #hechosmouse,
+    #envios {
+        margin-right: 100px;
+    }
+
+    #form {
+        width: 50%;
+    }
+}
