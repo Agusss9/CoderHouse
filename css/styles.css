@@ -7,7 +7,7 @@
 }
 
 .index-body {
-    background-image: url('/imagenes/fondito.jpg');
+    background-image: url('../imagenes/fondito.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ body {
 }
 
 .index-page {
-    background-image: url('/imagenes/artisan.jpg');
+    background-image: url('../imagenes/artisan.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
