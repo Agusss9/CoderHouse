@@ -177,7 +177,7 @@ h4, h3 {
     box-shadow: rgb(0, 0, 0) 1px 0 10px;
     transition: transform 0.3s ease;
     margin: 0 auto;
-    max-width: 500px; /* Adjust this value to your desired maximum width */
+    max-width: 500px;
 }
 
 .card-body {
@@ -404,13 +404,70 @@ section {
 
 @media screen and (max-width: 768px) {
     .navbar {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        padding-left: 90%;
+        padding-top: 0px;
+    }
+    
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 3px;
+        transition: transform 0.3s ease;
+    }
+    
+    .navbar .hamburger-menu:hover .line {
+        background-color: #ffffff;
+    }
+    
+    .navbar .hamburger-menu.open .line:nth-child(1) {
+        transform: translateY(5px) rotate(-45deg);
+    }
+    
+    .navbar .hamburger-menu.open .line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar .hamburger-menu.open .line:nth-child(3) {
+        transform: translateY(-5px) rotate(45deg);
+    }
+    
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+    .navbar.open .nav-links {
+        display: flex;
     }
 
-    .navbar a {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .logo img {
+        width: 150px;
+        height: 150px;
     }
 
     .footer {
@@ -431,6 +488,11 @@ section {
         margin-bottom: 10px;
     }
 
+    .card-producs {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
     .card {
         flex: 0 0 45%;
     }
@@ -441,12 +503,26 @@ section {
 
     #ofrecemos,
     #garantia {
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
     #hechosmouse,
     #envios {
-        margin-right: 100px;
+        margin-right: 50px;
+    }
+
+    #ofrecemoscsh,
+#garantia2 {
+    text-align: left;
+    margin-left: 50px;
+    color: black;
+}
+
+    #hechosmousep,
+    #envios2 {
+        text-align: right;
+        margin-right: 50px;
+        color: black;
     }
 
     #form {
