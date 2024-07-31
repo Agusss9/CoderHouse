@@ -16,6 +16,7 @@
 
 p, a, h1, h2, h3, h4, h5 {
   font-family: "Outfit", sans-serif;
+  margin-top: 10px !important;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
@@ -335,16 +336,14 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 20px;
-}
-.question-container h3, .question-container p {
-  margin: 0;
+  padding: 5px 20px;
 }
 
 #pf, #ofrecemos, #hechosmouse, #garantia, #envios {
   color: var(--highlight-color);
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
   font-weight: bold;
+  margin-bottom: -19px;
 }
 
 #pf {
