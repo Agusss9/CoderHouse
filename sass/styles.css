@@ -16,6 +16,7 @@
 
 p, a, h1, h2, h3, h4, h5 {
   font-family: "Outfit", sans-serif;
+  padding: 0px 15px;
   margin-top: 10px !important;
   font-optical-sizing: auto;
   font-weight: normal;
@@ -75,7 +76,7 @@ p, a, h1, h2, h3, h4, h5 {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 0px 15px;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -336,14 +337,14 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 5px 20px;
+  padding: 3px 20px;
 }
 
 #pf, #ofrecemos, #hechosmouse, #garantia, #envios {
   color: var(--highlight-color);
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
   font-weight: bold;
-  margin-bottom: -19px;
+  margin-bottom: -20px;
 }
 
 #pf {
