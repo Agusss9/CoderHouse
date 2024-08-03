@@ -386,6 +386,9 @@ section {
     position: relative;
     z-index: 1;
   }
+  .lista-pagos {
+    padding: 0%;
+  }
   .hamburger-menu {
     display: flex;
     flex-direction: column;
