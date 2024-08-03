@@ -239,17 +239,19 @@ h4, h3 {
   font-weight: bold;
 }
 
-.images-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  object-fit: cover;
 }
 
-.centered-image {
-  display: block;
-  max-width: 17%;
-  height: auto;
-  margin: auto;
+.image img {
+  border: 10px solid var(--highlight-color);
+  max-width: 100%;
+  max-height: 100%;
+  width: 99%;
+  height: 99%;
 }
 
 /* ESTILOS CONTACTO */
@@ -455,6 +457,19 @@ section {
   }
   h1, h4, h3 {
     padding: 0 100px 5px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 99%;
+    height: 99%;
   }
   #ofrecemos, #garantia {
     margin-left: 50px;
