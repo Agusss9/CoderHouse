@@ -16,9 +16,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
-p, a, h1, h2, h3, h4, h5 {
+a, h1, h2, h3, h4, h5 {
   font-family: 'Outfit', sans-serif;
-  padding: 0px 15px;
+  font-weight: bold !important;
   margin-top: 10px !important;
   font-optical-sizing: auto;
 }
@@ -131,19 +131,6 @@ body {
     max-width: 300px;
   }
 
-  .video-container {
-    color: var(--highlight-color);
-    text-align: center;
-    padding: 20px 20px;
-  }
-  .video-container h2 {
-    text-shadow: var(--highlight-color) 1px 0 20px;
-    margin-bottom: 20px;
-  }
-  .video {
-    box-shadow: var(--highlight-color) 1px 0 20px;
-  }
-
   button {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -163,6 +150,19 @@ body {
   }
 }
 
+.video-container {
+  color: var(--highlight-color);
+  text-align: center;
+  padding: 20px 20px;
+}
+.video-container h2 {
+  font-size: 200%;
+  text-shadow: var(--highlight-color) 1px 0 20px;
+  margin-bottom: 20px;
+}
+.video {
+  box-shadow: var(--highlight-color) 1px 0 20px;
+}
 /* ESTILOS TIENDA */
 
 .card-container {
@@ -531,6 +531,19 @@ section {
     max-height: 100%;
     width: 99%;
     height: 99%;
+  }
+
+  .video-container {
+    padding: 10px;
+
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  .video {
+    width: 100%;
+    height: 300px;
   }
 
   #ofrecemos, #garantia {
