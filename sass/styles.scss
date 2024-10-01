@@ -165,6 +165,22 @@ body {
 }
 /* ESTILOS TIENDA */
 
+.carrito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.carrito img {
+  width: 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.carrito span {
+  margin-left: 5px;
+  font-size: 14px;
+}
 
 
 .card-container {
