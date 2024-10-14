@@ -5,20 +5,20 @@ const productos = [
     { id: 3, nombre: 'MousePad FX SHIDENKAI V2', precio: 250 }
 ];
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 let total = 0;
 
 function agregarAlCarrito(id) {
     const producto = productos.find(item => item.id === id);
 
     if (producto) {
-    let productoExistente = carrito.find(item => item.id === id);
+        let productoExistente = carrito.find(item => item.id === id);
 
-    if (productoExistente) {
-        productoExistente.cantidad++;
-    } else {
-        carrito.push({ ...producto, cantidad: 1 });
-    }
+        if (productoExistente) {
+            productoExistente.cantidad++;
+        } else {
+            carrito.push({ ...producto, cantidad: 1 });
+        }
 
         actualizarCarrito();
     }
@@ -31,6 +31,7 @@ function eliminarProducto(id) {
 
 function actualizarCarrito() {
     total = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar en localStorage
     mostrarCarrito();
     mostrarTotal();
 }
@@ -57,5 +58,5 @@ function calcularCuotas(cuotas) {
     document.getElementById('cuotas').innerHTML = `Cuotas: ${cuotas} x $${cuota.toFixed(2)}`;
 }
 
-  // Inicializar el carrito al cargar la página
-actualizarCarrito();
+// Inicializar el carrito al cargar la página
+document.addEventListener('DOMContentLoaded', actualizarCarrito);
