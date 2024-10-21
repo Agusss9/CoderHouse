@@ -37,25 +37,39 @@ function actualizarCarrito() {
 }
 
 function mostrarCarrito() {
-    const carritoHTML = carrito.map(item => `
-        <div class="item">
-        <p>${item.nombre}</p>
-        <p>$${item.precio}</p>
-        <p>Cantidad: ${item.cantidad}</p>
-        <button onclick="eliminarProducto(${item.id})">Eliminar</button>
-        </div>
-    `).join('');
-
-    document.getElementById('carrito').innerHTML = carritoHTML;
+    const carritoElement = document.getElementById('carrito');
+    if (carritoElement) {
+        const carritoHTML = carrito.map(item => `
+            <div class="item">
+            <p>${item.nombre}</p>
+            <p>$${item.precio}</p>
+            <p>Cantidad: ${item.cantidad}</p>
+            <button onclick="eliminarProducto(${item.id})">Eliminar</button>
+            </div>
+        `).join('');
+        carritoElement.innerHTML = carritoHTML;
+    } else {
+        console.error("Elemento 'carrito' no encontrado");
+    }
 }
 
 function mostrarTotal() {
-    document.getElementById('total').innerHTML = `Total: $${total}`;
+    const totalElement = document.getElementById('total');
+    if (totalElement) {
+        totalElement.innerHTML = `Total: $${total}`;
+    } else {
+        console.error("Elemento 'total' no encontrado");
+    }
 }
 
 function calcularCuotas(cuotas) {
-    const cuota = total / cuotas;
-    document.getElementById('cuotas').innerHTML = `Cuotas: ${cuotas} x $${cuota.toFixed(2)}`;
+    const cuotasElement = document.getElementById('cuotas');
+    if (cuotasElement) {
+        const cuota = total / cuotas;
+        cuotasElement.innerHTML = `Cuotas: ${cuotas} x $${cuota.toFixed(2)}`;
+    } else {
+        console.error("Elemento 'cuotas' no encontrado");
+    }
 }
 
 // Inicializar el carrito al cargar la página
