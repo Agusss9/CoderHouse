@@ -27,7 +27,8 @@ a, h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
 }
 .navbar a {
   color: var(--text-color);
@@ -166,12 +167,24 @@ body {
 }
 
 .carrito img {
-  width: 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
 }
 
 .carrito span {
   margin-left: 5px;
   font-size: 14px;
+}
+
+#total {
+  color: #ffffff;
+}
+
+#cuotas {
+  color: #ffffff;
+}
+
+#carrito {
+  color: #ffffff;
 }
 
 .card-container {

@@ -32,13 +32,12 @@
             <div class="carrito">
                 <a href="ruta-al-carrito">
                     <img src="../imagenes/logos/carrito.png" alt="Carrito" />
-                    <span>(0)</span>
                 </a>
             </div>
                 <div id="carrito"></div>
                 <h4 id="total"></h4>
                 
-                <label for="cuotas">Elige cuotas:</label>
+                <label id="cuotas">Elige cuotas:</label>
                 <select id="cuotas-select" onchange="calcularCuotas(this.value)">
                     <option value="1">1 cuota</option>
                     <option value="3">3 cuotas</option>
@@ -46,7 +45,6 @@
                 </select>
                 
                 <p id="cuotas"></p>
-                <!-- ... rest of the body section ... -->
             </div>
         </div>
     </header>
