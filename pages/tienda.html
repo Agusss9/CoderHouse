@@ -14,39 +14,45 @@
 <body class="index-body">
     <header>
         <div class="navbar">
-            <div class="logo">
-                <a href="../index.html"><img src="../imagenes/logos/Mousepads Agusss_transparent.png" alt="Logo"></a>
+            <!-- Lado izquierdo: Logo y navegación -->
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="../index.html"><img src="../imagenes/logos/Mousepads Agusss_transparent.png" alt="Logo"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="../index.html">Inicio</a>
+                    <a href="./tienda.html">Tienda</a>
+                    <a href="./nosotros.html">Nosotros</a>
+                    <a href="./contacto.html">Contacto</a>
+                    <a href="./faqs.html">FAQs</a>
+                </div>
             </div>
-            <div class="hamburger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    
+            <div class="nav-right">
+                <div class="carrito">
+                    <div class="carrito-principal">
+                        <a href="ruta-al-carrito" class="carrito-icono">
+                            <img src="../imagenes/logos/carrito.png" alt="Carrito" />
+                        </a>
+                        <div class="carrito-contenido">
+                            <div id="carrito"></div>
+                            <h4 id="total"></h4>
+                        </div>
+                    </div>
+                    <div class="carrito-controles">
+                        <div class="cuotas-container">
+                            <label id="cuotas">Cuotas:</label>
+                            <select id="cuotas-select">
+                                <option value="1">1 cuota</option>
+                                <option value="3">3 cuotas</option>
+                                <option value="6">6 cuotas</option>
+                            </select>
+                        </div>
+                        <button id="vaciar-carrito">Vaciar</button>
+                        <p id="cuotas"></p>
+                    </div>
+                </div>
             </div>
-            <div class="nav-links">
-            <a href="../index.html">Inicio</a>
-            <a href="./tienda.html">Tienda</a>
-            <a href="./nosotros.html">Nosotros</a>
-            <a href="./contacto.html">Contacto</a>
-            <a href="./faqs.html">FAQs</a>
-            
-            <div class="carrito">
-                <a href="ruta-al-carrito">
-                    <img src="../imagenes/logos/carrito.png" alt="Carrito" />
-                </a>
-            </div>
-                <div id="carrito"></div>
-                <h4 id="total"></h4>
-                
-                <label id="cuotas">Elige cuotas:</label>
-                <select id="cuotas-select" onchange="calcularCuotas(this.value)">
-                    <option value="1">1 cuota</option>
-                    <option value="3">3 cuotas</option>
-                    <option value="6">6 cuotas</option>
-                </select>
-                
-                <p id="cuotas"></p>
-            </div>
-        </div>
     </header>
     <main>
         <div class="tienda-page">
@@ -63,7 +69,7 @@
                             <p class="card-text">El <strong>MousePad FX TYPE-99</strong> es ideal para gamers y profesionales, ofrece una superficie microtexturizada para un perfecto control, una base antideslizante y bordes cosidos para mayor durabilidad.</p>
                         </div>
                         <div class="card-footer">
-                            <button onclick="agregarAlCarrito(1)">Agregar MousePad FX TYPE-99</button>
+                            <button class="agregar-carrito" data-id="1">Agregar MousePad FX TYPE-99</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +82,7 @@
                             <p class="card-text">El <strong>MousePad FX HIEN</strong> es ideal para gamers y profesionales, con una superficie de tela que equilibra velocidad y control, base antideslizante, bordes cosidos duraderos, ofreciendo una excelente precisión en todo tipo de juegos.</p>
                         </div>
                         <div class="card-footer">
-                            <button onclick="agregarAlCarrito(2)">Agregar MousePad FX HIEN</button>
+                            <button class="agregar-carrito" data-id="2">Agregar MousePad FX HIEN</button>
                         </div>
                     </div>
                 </div>
@@ -89,7 +95,7 @@
                             <p class="card-text">El <strong>MousePad FX SHIDENKAI V2</strong> ofrece una superficie de vidrio texturizado para un deslizamiento ultra rápido, base antideslizante, bordes cosidos duraderos, ideal para gamers exigentes.</p>
                         </div>
                         <div class="card-footer">
-                            <button onclick="agregarAlCarrito(3)">Agregar MousePad FX SHIDENKAI V2</button>
+                            <button class="agregar-carrito" data-id="3">Agregar MousePad FX SHIDENKAI V2</button>
                         </div>
                     </div>
                 </div>
@@ -121,13 +127,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             var hamburgerMenu = document.querySelector('.hamburger-menu');
             var navLinks = document.querySelector('.navbar');
-
-            hamburgerMenu.addEventListener('click', function() {
-                navLinks.classList.toggle('open');
-            });
+    
+            if (hamburgerMenu && navLinks) {
+                hamburgerMenu.addEventListener('click', function() {
+                    navLinks.classList.toggle('open');
+                });
+            }
         });
     </script>
-    <script src="../main.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
