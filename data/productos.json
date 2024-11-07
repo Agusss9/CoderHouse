@@ -1,0 +1,22 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "MousePad FX TYPE-99",
+            "descripcion": "El MousePad FX TYPE-99 es ideal para gamers y profesionales, ofrece una superficie microtexturizada para un perfecto control, una base antideslizante y bordes cosidos para mayor durabilidad.",
+            "precio": 150
+        },
+        {
+            "id": 2,
+            "nombre": "MousePad FX HIEN",
+            "descripcion": "El MousePad FX HIEN es ideal para gamers y profesionales, con una superficie de tela que equilibra velocidad y control, base antideslizante, bordes cosidos duraderos, ofreciendo una excelente precisión en todo tipo de juegos.",
+            "precio": 200
+        },
+        {
+            "id": 3,
+            "nombre": "MousePad FX SHIDENKAI V2",
+            "descripcion": "El MousePad FX SHIDENKAI V2 ofrece una superficie de vidrio texturizado para un deslizamiento ultra rápido, base antideslizante, bordes cosidos duraderos, ideal para gamers exigentes.",
+            "precio": 300
+        }
+    ]
+}
