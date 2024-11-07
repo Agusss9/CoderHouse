@@ -37,13 +37,22 @@
     // Función para mostrar productos en la página
     function mostrarProductos() {
         if (!productosContainer) return;
-
+    
+        const imagenes = {
+            1: 'artisantype-99.png',
+            2: 'artisanhien.png',
+            3: 'artisanSHIDENKAIV2.png'
+        };
+    
         productosContainer.innerHTML = productos.map(producto => `
             <div class="col card-container">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">${producto.nombre}</h5>
-                        <img src="../imagenes/artisan${producto.id}.png" class="card-img-top" alt="${producto.nombre}">
+                        <img src="../imagenes/${imagenes[producto.id]}" 
+                             class="card-img-top" 
+                             alt="${producto.nombre}"
+                             onerror="this.onerror=null; this.src='../imagenes/imagen_no_disponible.png';">
                         <p class="card-text">${producto.descripcion}</p>
                         <p class="card-text">Precio: $${producto.precio}</p>
                     </div>
@@ -55,7 +64,7 @@
                 </div>
             </div>
         `).join('');
-
+    
         // Agregar event listeners a los botones
         document.querySelectorAll('.agregar-carrito').forEach(button => {
             button.addEventListener('click', () => {
