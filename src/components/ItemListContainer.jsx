@@ -1,4 +1,3 @@
-// src/components/ItemListContainer.jsx
 import React, { forwardRef } from 'react'; // Correcto
 import { useColorMode, Center } from "@chakra-ui/react"; // Importación correcta de Chakra UI
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"; // Importación de iconos

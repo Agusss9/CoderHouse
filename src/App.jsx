@@ -1,6 +1,5 @@
-// src/App.jsx
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
 const App = () => {

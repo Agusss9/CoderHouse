@@ -1,7 +1,6 @@
-// src/Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Navbar = ({ itemCount }) => {
+const NavBar = ({ itemCount }) => {
     return (
         <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '10px', background: '#4d339b', color: 'white' }}>
             <div>
@@ -15,4 +14,4 @@ const Navbar = ({ itemCount }) => {
     );
 };
 
-export default Navbar;
+export default NavBar;
